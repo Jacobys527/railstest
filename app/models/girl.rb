@@ -7,4 +7,8 @@ class Girl < ApplicationRecord
 			ranking.rank
 		end
 	end
+
+	def rank_sum
+		Ranking.where(girl_id: id).sum(:rank)
+	end
 end

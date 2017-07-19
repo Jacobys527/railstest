@@ -31,6 +31,7 @@ class RankingController < ApplicationController
 
         if direction == "up"
           # swap with upper ranker
+          
           upper = current_user.rankings.where(rank: ranking.rank.to_i - 1).first
           upper.rank = current.rank
           current.rank = current.rank - 1

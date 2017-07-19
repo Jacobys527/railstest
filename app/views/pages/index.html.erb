@@ -7,3 +7,12 @@
 
 <p> Best girls are: </p>
 <p> ##Display best girl ranking here:## </p>
+<table>
+	<% @girls.each_with_index do |girl, n| %>
+		<tr>
+			<td><%= n+1 %></td>
+			<td><%= girl[:name] %></td>
+			<td><%= girl.rank_sum %></td>
+		</tr>
+	<% end %>
+</table>
